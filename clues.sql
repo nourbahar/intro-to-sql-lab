@@ -62,7 +62,7 @@ SELECT cities.name  FROM countries JOIN cities ON countries.code = cities.countr
 -- -- follow right behind you!
 
 -- Write SQL query here
-
+SELECT * FROM cities WHERE id='211';
 
 --  WHERE cities.name LIKE '%Serra';
 -- Clue #7: She knows we're on to her –
