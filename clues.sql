@@ -37,7 +37,7 @@ SELECT name,code FROM countries WHERE code='SMR';
 
 -- Write SQL query here
 
-SELECT name FROM cities WHERE countrycode = 'SMR';
+SELECT name FROM cities WHERE countrycode = 'SMR' AND name <> 'San Marino';
 
 -- Clue #5: Oh no, she pulled a switch –
 --  there are two cities with very similar names, 
@@ -49,6 +49,11 @@ SELECT name FROM cities WHERE countrycode = 'SMR';
 
 -- Write SQL query here
 
+SELECT * FROM cities WHERE name LIKE 'Serra%';
+SELECT name FROM countries WHERE code = 'BRA';
+SELECT cities.name  FROM countries JOIN cities ON countries.code = cities.countrycode
+ WHERE cities.name LIKE 'Serra%';
+
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport,
 --  and is headed towards
@@ -59,6 +64,7 @@ SELECT name FROM cities WHERE countrycode = 'SMR';
 -- Write SQL query here
 
 
+--  WHERE cities.name LIKE '%Serra';
 -- Clue #7: She knows we're on to her –
 -- her taxi dropped her off at the international airport, 
 -- and she beat us to the boarding gates.
